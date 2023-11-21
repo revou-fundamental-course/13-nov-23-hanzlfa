@@ -3,24 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Han's Interior Design</title>
-    <link rel="stylesheet" href="./css/style.css"
+    <title>Han's Interior Design</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Playfair+Display?preview.text=Interior%20Design&stroke=Serif">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-    <header class="header">
-        <div class="nav-logo">
-            <img src="./assets/logo.png" alt="han.skp-logo">
+    <header>
+        <div class="navbar">
+            <div class=navlogo>
+                <img src="./assets/logo-1.png">
+            </div>
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+            <a href="#" class="action">Contact Us</a>
+            <div class="toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-    <nav class="nav">
-        <a href="home" class="nav-item">Home</a>
-        <a href="our-service" class="nav-item">Our Service</a>
-        <a href="contact-us" class="nav-item">Contact Us</a>
-    </nav>
+        <div class="dropdown-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#" class="action">Contact</a></li>
+        </div>
     </header>
+    
+    <main>
+        <div class="bigimage">
+            <div class="overlay">
+                <h1 class="main-tittle">Han's Interior Design</h1>
+                <br>
+                <p class="sub-tittle">Designing spaces that are dressed in comfort, harvest harmony, and spreading warmth for a place call home where you can rest and life.</p>
+            </div>
+        </div>
+    </main>
 
-    <section>
+    
+        <div class="container">
+            <div class="box-left">
+                <div class="small-image">
+                    <img src="./assets/portfolio.png">
+                </div>
+                <h1 class="portfolio">Our Portfolio</h1>
+                <br>
+                <section class="testi">
+                    <div class>
+                        <p class="testi-comment">"These designs are so on point!"</p>
+                    </div>
+                    <div class="testi-info">
+                        <img src="./assets/testi.jpg">
+                    <div class="testi-bio">
+                        <h3 class="nama">Florence Hughes</h3>
+                        <span class="pekerjaan">Ibu Rumah Tangga, 28</span>
+                    </div>
+                    </div>
+                    <br>
+                    <hr>
+                </section>
+                <div class="services">
+                    <h1 class="what-service">Found Symphony Between The Signature of The Taste</h1>
+                    <br>
+                    <p class="desc">Renewing the space of your interior design even which renovation designed to give for the best service. Mixtures of the premium interior coveted taste for your house, office, or any retail shop and make it in touch with beautiful.</p>
+                </div>
+            </div>
+            <div class="box-right">
+                <form action="#">
+                    <h1 class="touch">Get In Touch With Me</h1>
+                    <br>
+                    <table>
+                        <tr>
+                            <td class="form">Name:</td>
+                        </tr>
+                        <td><input id="name" type="text" placeholder="First and Last Name"></td>
+                        <tr>
+                            <td class="form">Email Adress:</td>
+                        </tr>
+                        <td><input type="email" id="email" placeholder="example@gmail.com"></td>
+                        <tr>
+                            <td class="form">Phone Number:</td>
+                        </tr>
+                        <td><input type="text" id="phone"></td>
+                        <tr>
+                            <td class="form">Project Location:</td>
+                        </tr>
+                        <td><input type="text" id="Location"></td>
+                        <tr>
+                            <td class="form">What are you interested in?</td>
+                        </tr>
+                        <td><select>
+                            <option value="none" selected disabled>Select Option</option>
+                            <option>Decorating</option>
+                            <option>Renovation</option>
+                            <option>Retail Store Interior Design</option>
+                        </select></td>
+                        <tr>
+                            <td class="form">Project Description:</td>
+                        </tr>
+                            <td><textarea id="Description" name="Description"></textarea></td>
 
-    </section>
+                    </table>
+                    <br>
+                    <tr><button class="submit">Send</button></tr>
+                </form>
+            </div>
+        </div>
     <script src="./js/script.js"></script>
 </body>
 </html>
