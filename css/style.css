@@ -376,10 +376,6 @@ select {
         border-radius: 8px;
     }
 
-    td {
-       font-size: 18px;
-    }
-
      select {
         height: 50px;
         font-size: 18px;
