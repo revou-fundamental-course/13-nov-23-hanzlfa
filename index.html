@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Playfair+Display?preview.text=Interior%20Design&stroke=Serif">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
             </ul>
-            <a href="#" class="action">Contact Us</a>
+            <a href="#form" class="action">Contact Us</a>
             <div class="toggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -48,11 +49,13 @@
         <div class="container">
             <div class="box-left">
                 <div class="small-image">
-                    <img src="./assets/portfolio.png">
+                    <img src="./assets/1.png">
+                    <img src="./assets/2.png">
+                    <img src="./assets/3.png">
+                    <img src="./assets/4.png">
+                    <img src="./assets/5.png">
                 </div>
-                <h1 class="portfolio">Our Portfolio</h1>
-                <br>
-                <section class="testi">
+                <div class="testi">
                     <div class>
                         <p class="testi-comment">"These designs are so on point!"</p>
                     </div>
@@ -64,55 +67,82 @@
                     </div>
                     </div>
                     <br>
-                    <hr>
-                </section>
-                <div class="services">
-                    <h1 class="what-service">Found Symphony Between The Signature of The Taste</h1>
                     <br>
-                    <p class="desc">Renewing the space of your interior design even which renovation designed to give for the best service. Mixtures of the premium interior coveted taste for your house, office, or any retail shop and make it in touch with beautiful.</p>
+                    <hr>
                 </div>
             </div>
+            
             <div class="box-right">
                 <form action="#">
-                    <h1 class="touch">Get In Touch With Me</h1>
+                    <h1 class="touch">Get In Touch With Us</h1>
                     <br>
-                    <table>
-                        <tr>
-                            <td class="form">Name:</td>
-                        </tr>
-                        <td><input id="name" type="text" placeholder="First and Last Name"></td>
-                        <tr>
-                            <td class="form">Email Adress:</td>
-                        </tr>
-                        <td><input type="email" id="email" placeholder="example@gmail.com"></td>
-                        <tr>
-                            <td class="form">Phone Number:</td>
-                        </tr>
-                        <td><input type="text" id="phone"></td>
-                        <tr>
-                            <td class="form">Project Location:</td>
-                        </tr>
-                        <td><input type="text" id="Location"></td>
-                        <tr>
-                            <td class="form">What are you interested in?</td>
-                        </tr>
-                        <td><select>
+
+                    <div class="input-group">
+                        <span id="name-error"></span>
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter Your First and Last Name" id="contact-name" onkeyup="validateName()">
+                    </div>
+
+                    <div class="input-group">
+                        <span id="email-error"></span>
+                        <label>Email</label>
+                        <input type="email" placeholder="example@gmail.com"  id="contact-email" onkeyup="validateEmail()">
+                    </div>
+
+                    <div class="input-group">
+                        <span id="phone-error"></span>
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="1234567890"  id="contact-phone" onkeyup="validatePhone()">
+                    </div>
+
+
+                    <div class="input-group">
+                        <span id="option-error"></span>
+                        <label>What are you interested in?</label>
+                        <select id="contact-option" onkeyup="validateOption()">
                             <option value="none" selected disabled>Select Option</option>
                             <option>Decorating</option>
                             <option>Renovation</option>
-                            <option>Retail Store Interior Design</option>
-                        </select></td>
-                        <tr>
-                            <td class="form">Project Description:</td>
-                        </tr>
-                            <td><textarea id="Description" name="Description"></textarea></td>
-
+                            <option>Furniture Design</option>
+                            <option>Interior Design</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
                     </table>
-                    <br>
-                    <tr><button class="submit">Send</button></tr>
+                    <span id="submit-error"></span>
+                    <tr><button class="submit" onclick="return validateForm()">Send</button></tr>
+                    
                 </form>
             </div>
         </div>
+
+        <div class="services">
+            <h1 class="respons">Our Responsibilities</h1>
+            <div class="feature">
+                <div class="features">
+                    <i class='fas fa-clipboard-list'></i>
+                    <p>Identify goals and requirements for the space to be designed and outlines client design objectives.</p>
+                </div>
+                <div class="features">
+                    <i class='fas fa-edit'></i>
+                    <p>Conceptualizes design plans and prepares sketches or other visual aids to present designs to the client.</p>
+                </div>
+                <div class="features">
+                    <i class='fas fa-comments'></i>
+                    <p>Consults with the client to choose materials, furnishings and decor that will help fulfill the requirements and vision of the space.</p>
+                </div>
+        </div>
+        </div>
+        </div>
+
+        <section class="call-to-action">
+        <h1 class="main-call"> &#10077; Found Symphony Between
+            The Signature of The Taste. &#10078;</h1>
+            <br>
+            <p class="desc">Renewing the space of your interior design even which renovation designed to give for the best service. Mixtures of the premium interior coveted taste for your house, office, or any retail shop and make it in touch with beautiful.</p>
+            <button class="cta">Contact Us</button>
+        </section>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
